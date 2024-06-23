@@ -17,7 +17,7 @@ impl Inventory {
         let mut reds = 0;
         let mut blues = 0;
 
-        for shirt in self.shirts {
+        for shirt in &self.shirts {
             match shirt {
                 ShirtColor::Red => reds += 1,
                 ShirtColor::Blue => blues += 1,
