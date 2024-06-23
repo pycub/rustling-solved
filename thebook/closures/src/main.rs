@@ -10,7 +10,7 @@ struct Inventory {
 
 impl Inventory {
     fn giveaway(&self, user_preference: Option<ShirtColor>) -> ShirtColor {
-        return user_preference.unwrap_or_else(|| self.most_stocked());
+        return user_preference.unwrap_or_else(|| -> ShirtColor { self.most_stocked() });
     }
 
     fn most_stocked(&self) -> ShirtColor {
